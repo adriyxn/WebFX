@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Res</title>
+ 
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Anton" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style media="screen">
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #ededed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+
+/*navigation bar*/
+
+#menuToggle
+{
+  display: block;
+  position: relative;
+  top: 50px;
+  left: 50px;
+  
+  z-index: 1;
+  
+  -webkit-user-select: none;
+  user-select: none;
+
+  margin-top: -30px;
+  margin-left: -230px;
+}
+
+#menuToggle a
+{
+  text-decoration: none;
+  color: #232323;
+  
+  transition: color 0.3s ease;
+}
+
+#menuToggle a:hover
+{
+  color: tomato;
+}
+
+
+#menuToggle input
+{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  
+  cursor: pointer;
+  
+  opacity: 0; 
+  z-index: 2; 
+  
+  -webkit-touch-callout: none;
+}
+
+#menuToggle span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  
+  background: black;
+  border-radius: 3px;
+  
+  z-index: 1;
+  
+  transform-origin: 4px 0px;
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+#menu
+{
+  position: absolute;
+  width: 300px;
+  height: 780px;
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px;
+  
+  background: #6dd2de;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu li
+{
+  padding: 10px 0;
+  font-size: 22px;
+  color: white;
+}
+
+#menuToggle input:checked ~ ul
+{
+  transform: none;
+}
+img{
+  max-width: 100%;
+}
+/*bg text*/
+.bodytext{
+    display: relative;
+    margin-top: -430px;
+    margin-left: 570px;
+    background-color: #616161;
+    padding: 40px;
+    
+}
+pre{
+    
+    color: white;
+    font-family: 'Poppins';
+    font-size: 30px;
+}
+
+p{
+    color: white;
+    font-family: 'Poppins';
+    font-size: 20px;
+
+}
+
+#logo{
+    margin-left: 1150px;
+    margin-top: 20px;
+    font-size: 30px;
+    font-family: 'Anton';
+    color: black;
+}
+
+.bg-white i{
+    color: #4fd9db;
+    font-size: 40px;
+    padding: 20px;
+
+}
+
+.features{
+  margin-top: 30px;
+}
+
+/*card */
+ .container-fluid {
+	 width: 100%;
+}
+ @media (max-width: 530px) {
+	 .container-fluid {
+		 left: 0;
+		 margin: 10px 0;
+		 position: relative;
+		 top: 0;
+		 transform: none;
+	}
+}
+ .blog-card {
+	 background-color: #6dd2de;
+	 border-radius: 1px;
+	 height: 450px;
+	 margin: 0 auto;
+	 max-width: 1100px;
+	 overflow: hidden;
+}
+ @media (max-width: 580px) {
+	 .blog-card {
+		 height: 350px;
+		 overflow: visible;
+	}
+}
+ .media {
+	 background-position: center;
+	 background-size: cover;
+	 height: 100%;
+}
+ .card-body {
+   color:black;
+	 height: 100%;
+	 padding: 30px 20px 50px;
+   
+}
+ @media (max-width: 530px) {
+	 .card-body {
+		 background-color: white;
+	}
+}
+ .title {
+	 color: white;
+	 font-family: 'Poppins';
+	 font-size: 30px;
+	 font-weight: 400;
+   margin-top: -330px;
+}
+ .divider {
+	 height: 2px;
+	 margin: 25px auto;
+	 width: 40px;
+}
+ .paragraph {
+	 font-weight: 300;
+   color:white;
+   margin-top: -30px;
+}
+
+ @media (max-width: 530px) {
+	 .col-xs-6 {
+		 width: 100%;
+	}
+}
+
+/*newsletter*/
+.subscribe {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background: white;
+	width: 1080px;
+	height: 300px;
+	border-radius: 10px;
+  margin-left: 15px;
+}
+
+
+.subscribe__title {
+	font-weight: bold;
+	font-size: 26px;
+	margin-bottom: 18px;
+  margin-top: 40px;
+  padding: 20px;
+}
+
+.subscribe__copy {
+	max-width: 450px;
+	text-align: center;
+	margin-bottom: 53px;
+	line-height: 1.5;
+}
+
+.form {
+	margin-bottom: 25px;
+  margin-top: -180px;
+  padding: 20px;
+}
+
+.form__email {
+	padding: 20px 25px;
+	border-radius: 5px;
+ 	border: 1px solid #CAD3DB;
+	width: 431px;
+	font-size: 18px;
+	color: #0F121F;
+}
+
+.form__email:focus {
+	outline: 1px solid #6dd2de;
+}
+
+.form__button {
+	background: #6dd2de;
+	padding: 10px;
+	border: none;
+	width: 244px;
+	height: 65px;
+	border-radius: 5px;
+	font-size: 18px;
+	color: white;
+}
+
+.form__button:hover {
+	box-shadow: 0 2px 20px rgba(109, 210, 222);
+}
+
+.notice {
+	width: 345px;
+  margin-top: -20px;
+}
+
+    </style>
+</head>
+
+
+<body class="container">
+  
+
+
+
+        <header class="header-area overlay">
+            <nav role="navidgation">
+                <div id="menuToggle">
+
+                    <input type="checkbox" />
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                    <ul id = "menu">
+                        <a href = "#"><li>Home</li></a>
+                        <a href = "#"><li>About</li></a>
+                        <a href = "#"><li>Services</li></a>
+                        <a href = "#"><li>Contact</li></a>
+                    </ul>
+                </div>
+
+            </nav>
+            
+            <a href="#" class="navbar-brand" id ="logo"> WebFX</a>
+        </header>
+
+        <div class="container-fluid">
+          <img src="bg.png" class="img-fluid" >
+        </div>
+
+        <div class="bodytext" style="width:450px; opacity: 80%;">
+        <pre>Welcome To Our Studio.</pre>
+        <p id="subhead">We do more than marketing.</p>
+        <p id="subhead" style="font-size: 15px;">Whether your company looks for a financial consulting, investment risks assessments or an interim, HR management, we're ready to provide that for you.</p>
+        
+        <button type = "button" class="btn btn-info" >More Info</button>
+        
+
+    </div>
+    <br><br><br>
+    <h4 style="font-size:35px; text-align: center; font-family: 'poppins'; 
+    margin-top: 50px;">Our Features & Services</h4>
+    <!--features-->
+<div class="container">
+  <div class="features">
+
+    <!--first line-->
+  <div class="row text-center">
+
+      <div class="col-xl-3 col-sm-6 mb-5">
+          <div class="bg-white rounded shadow-sm py-5 px-4">
+            <i class="fa-solid fa-palette" style="font-size:60px;"></i>
+              <h5 class="mb-0">Graphic Design</h5>
+              <span class="small text-uppercase text-muted"></span>
+          </div>
+      </div>
+
+      <div class="col-xl-3 col-sm-6 mb-5">
+        <div class="bg-white rounded shadow-sm py-5 px-4">
+          <i class="fa-solid fa-film" style="font-size:60px;"></i>
+            <h5 class="mb-0">Video Production</h5>
+        </div>
+    </div>
+
+    <div class="col-xl-3 col-sm-6 mb-5">
+      <div class="bg-white rounded shadow-sm py-5 px-4">
+        <i class="fa-solid fa-award"  style="font-size:60px;"></i>
+          <h5 class="mb-0">Branding</h5>
+          <span class="small text-uppercase text-muted"></span>
+      </div>
+  </div>
+
+
+  <div class="col-xl-3 col-sm-6 mb-5">
+    <div class="bg-white rounded shadow-sm py-5 px-4">
+      <i class="fa-solid fa-laptop-code" style="font-size:60px;"></i>
+        <h5 class="mb-0">Web Design</h5>
+        <span class="small text-uppercase text-muted"></span>
+    </div>
+</div>
+  </div>
+
+</div>
+</div>
+
+
+<div class="container-fluid">
+  <div class="blog-card">
+    <div class="media col-sm-6 col-xs-6" style="background-image: url(home.jpg)">
+    </div>
+    <div class="card-body col-sm-6 col-xs-6" style="float: right;">
+      <h3 class="title text-center">How we work</h3>
+      <div class="divider"></div>
+      <p class="paragraph text-justify">Specialists in brand strategy, 
+        brand creation, web designing, graphic designing and video 
+        creating.
+        We use design thinking to add commercial value to our clients 
+        business and products, producing work that enages and provokes 
+        positive change.
+      </p>
+    </div>
+  </div>
+</div>
+
+  <div clas="morethan" style="text-align: center; font-family: 'poppins'; margin-top: 50px;">
+  <h4 style="font-size:35px;">We do more than marketing</h4>
+  <p style="font-size:20px; color: black; font-weight: 100;">Lorem ipsum dolor sit amet, aut odiut perspiciatis unde omnis iste 
+    natus odit aut fugitsed quia consequuntur alquam quaerat voluptatem.</p>
+</div>
+
+<br>
+<div class="container-fluid">
+  <div class="blog-card">
+    <div class="media col-sm-6 col-xs-6" style="background-image: url(webdesign.jpg); float: right;">
+    </div>
+    <div class="card-body col-sm-6 col-xs-6" style="float: left; margin-top: 400px;">
+      <h3 class="title text-center" >We create websites that sky rocket your business</h3>
+      <div class="divider"></div>
+      <p class="paragraph text-justify">Our passion, excellent listening 
+        skills and personalised touch help build a strong and unique 
+        rapport with our clients. This enables us to interpret the 
+        client's requirements are reflected in every stage of the graphic 
+        and web design process, always exceeding expectations.
+      </p>
+    </div>
+  </div>
+</div>
+
+<!--statistics-->
+<br><br>
+<div class="row text-center" style="margin: 2px;">
+  <div class="col-xl-3 col-sm-6 mb-5">
+      <div class="bg-white rounded shadow-sm py-5 px-4">
+        <h6 class="mb-0" style="font-size: 50px; color: #6dd2de;">58</h6>  
+        <h5 class="mb-0">Clients</h5>
+          <span class="small text-uppercase text-muted"></span>
+      </div>
+  </div>
+
+  <div class="col-xl-3 col-sm-6 mb-5">
+    <div class="bg-white rounded shadow-sm py-5 px-4">
+      <h6 class="mb-0" style="font-size: 50px; color: #6dd2de;">150</h6>
+        <h5 class="mb-0">Projects Completed</h5>
+    </div>
+</div>
+
+<div class="col-xl-3 col-sm-6 mb-5">
+  <div class="bg-white rounded shadow-sm py-5 px-4">
+    <h6 class="mb-0" style="font-size: 50px; color: #6dd2de;">34</h6>
+      <h5 class="mb-0">Websites</h5>
+      <span class="small text-uppercase text-muted"></span>
+  </div>
+</div>
+
+
+<div class="col-xl-3 col-sm-6 mb-5">
+<div class="bg-white rounded shadow-sm py-5 px-4">
+  <h6 class="mb-0" style="font-size: 50px; color: #6dd2de;">58</h6>
+    <h5 class="mb-0">Web Design</h5>
+    <span class="small text-uppercase text-muted"></span>
+</div>
+</div>
+</div>
+
+<!--newsletter-->
+<div class="subscribe">
+	<h2 class="subscribe__title">Let's keep in touch</h2>
+	<p class="subscribe__copy">Subscribe to keep up with fresh news and exciting updates. We promise not to spam you!</p>
+	<div class="form">
+		<input type="email" class="form__email" placeholder="Enter your email address" />
+		<button class="form__button">Send</button>
+	</div>
+	<div class="notice">
+		<input type="checkbox">
+		<span class="notice__copy">I agree to my email address being stored and uses to recieve monthly newsletter.</span>
+	</div>
+</div>
+<br>
+<br>
+</body>
+</html>
